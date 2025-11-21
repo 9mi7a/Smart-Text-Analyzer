@@ -1,0 +1,11 @@
+Evaluate whether the text contains:
+- political bias
+- emotional manipulation
+- unsupported claims
+Return them in this JSON:
+{
+ "is_biased": true/false,
+ "bias_type": "...",
+ "hallucination_risk": "low/medium/high",
+ "evidence": [...]
+}

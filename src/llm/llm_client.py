@@ -1,22 +1,29 @@
 import os
 import time
-import openai
+import google.generativeai as genai
 from typing import List, Dict, Optional
-
+from dotenv import load_dotenv
+load_dotenv()
 class LLMClient:
     def __init__(
         self,
-        model: str = "gpt-4.1-mini",
+        model: str = "gemini-2.5-flash-lite",
         api_key: Optional[str] = None,
         max_retries: int = 3,
         temperature: float = 0.7
     ):
         self.model = model
-        self.api_key = api_key or os.getenv("OPENAI_API_KEY")
+        self.api_key = os.getenv("GEMINI_API_KEY")
+
+
         self.max_retries = max_retries
         self.temperature = temperature
 
-        openai.api_key = self.api_key
+        # Configure the Gemini client
+        genai.configure(api_key=self.api_key)
+
+        # Load the model
+        self.client = genai.GenerativeModel(self.model)
 
     # ==========
     # MAIN METHOD
@@ -30,19 +37,19 @@ class LLMClient:
         """
         retries = 0
 
+        # Gemini expects a single list of message dicts
         while retries < self.max_retries:
             try:
-                response = openai.chat.completions.create(
-                    model=self.model,
-                    messages=messages,
-                    temperature=self.temperature
+                response = self.client.generate_content(
+                    messages,
+                    generation_config={"temperature": self.temperature}
                 )
 
-                return response.choices[0].message["content"]
+                return response.text
 
             except Exception as e:
                 print(f"[LLM ERROR] {e}")
                 retries += 1
-                time.sleep(1)
+                time.sleep(3)
 
         raise RuntimeError("LLM failed after retries")

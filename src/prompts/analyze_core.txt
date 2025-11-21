@@ -1,0 +1,4 @@
+Analyze the following text and return:
+- sentiment: positive | neutral | negative
+- summary: 2–3 bullet points
+- key_topics: list of topics
