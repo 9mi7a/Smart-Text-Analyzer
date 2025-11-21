@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b4456d9-efbf-482d-b4fc-24bde8b99abd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/llm/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/llm/run_chain.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prompts/analyze_bias.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prompts/analyze_core.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prompts/system.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/llm/base_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/llm/gemini_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/llm/llm_factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/llm/openai_client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/llm/llm_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/llm/llm_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/llm/run_chain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analyzer/run_chain.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +55,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\pojects\Ai-journey\src\analyzer" />
       <recent name="C:\Users\USER\Desktop\pojects\Ai-journey\src" />
       <recent name="C:\Users\USER\Desktop\pojects\Ai-journey\src\llm" />
     </key>
@@ -79,7 +78,7 @@
       <updated>1763549395607</updated>
       <workItem from="1763549396647" duration="1093000" />
       <workItem from="1763561769181" duration="12386000" />
-      <workItem from="1763713272058" duration="3718000" />
+      <workItem from="1763713272058" duration="5773000" />
     </task>
     <servers />
   </component>
@@ -90,18 +89,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/llm/run_chain.py</url>
+          <url>file://$PROJECT_DIR$/src/analyzer/run_chain.py</url>
           <line>32</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/llm/run_chain.py</url>
-          <line>44</line>
+          <url>file://$PROJECT_DIR$/src/analyzer/run_chain.py</url>
+          <line>42</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/llm/run_chain.py</url>
-          <line>54</line>
+          <url>file://$PROJECT_DIR$/src/analyzer/run_chain.py</url>
+          <line>51</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
